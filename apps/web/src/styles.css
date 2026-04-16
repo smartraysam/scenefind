@@ -1,0 +1,227 @@
+:root {
+  --bg: #f7f2e8;
+  --ink: #1b1f22;
+  --accent: #146c94;
+  --accent-soft: #d8eef9;
+  --danger: #a61b34;
+  --panel: #ffffff;
+  --line: #d5d9dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, #fff6e6 0, transparent 45%),
+    radial-gradient(circle at 80% 0%, #dbf1ff 0, transparent 35%),
+    var(--bg);
+}
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 8px 0;
+}
+
+.subtitle {
+  margin-top: 0;
+}
+
+.chip {
+  display: inline-block;
+  padding: 6px 10px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.usage-banner {
+  margin-top: 18px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.usage-banner a {
+  color: #9ed7ff;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.dropzone {
+  display: block;
+  border: 2px dashed #8ba3b3;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.dropzone:hover {
+  border-color: var(--accent);
+}
+
+.dropzone input {
+  display: none;
+}
+
+.preview {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.preview img,
+.preview video,
+.poster {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.cta,
+.ghost {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cta {
+  margin-top: 14px;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+}
+
+.ghost {
+  background: #edf1f2;
+}
+
+.error {
+  color: var(--danger);
+}
+
+.headline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.badge {
+  background: #f2e9cb;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 14px;
+}
+
+.streaming-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stream-pill {
+  border: 2px solid #333;
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 12px;
+}
+
+.disclosure {
+  display: block;
+  margin-top: 12px;
+  color: #444;
+}
+
+.pricing {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.billing-input-row {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+}
+
+.billing-input-row input {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+}
+
+.checkout-message {
+  color: #0b6a2b;
+}
+
+.price-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.checkout-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.price-card.featured {
+  border: 2px solid var(--accent);
+}
+
+.price {
+  font-size: 1.7rem;
+  margin: 10px 0;
+}
+
+@media (max-width: 720px) {
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .usage-banner {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
